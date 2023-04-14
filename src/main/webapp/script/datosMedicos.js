@@ -7,7 +7,7 @@ var errorDNI = "Vaya, el dni indicado no coincide con ninguno de los registrados
 
 
 //Se crea la clase paciente:
-class Paciente
+class paciente
 {
 	constructor(nombre,apellido,dni,edad,tlf,fechaDeNacimiento)
 	{
@@ -50,7 +50,7 @@ class ImplementacionUsuario
 		var fechaDeNacimiento=prompt("Introduzca su fecha de nacimiento:", "día-mes-año");
 	
 		//Se guardan los datos:
-		var alumno= new Paciente(nombre,apellido,dni,edad,tlf,fechaDeNacimiento);
+		var alumno= new paciente(nombre,apellido,dni,edad,tlf,fechaDeNacimiento);
 		
 		//Se añade el usuario a la lista:
 		bd.push(alumno);
@@ -148,20 +148,20 @@ class ImplementacionCitas
 	
 	//Las funciones que llaman a los diferentes métodos:
 	function crearUsuario(){
-		ImplementacionUsuario.addPaciente(Paciente);
+		ImplementacionUsuario.addPaciente(paciente);
 	}
 	
 	function borrarUsuario(){
-		ImplementacionUsuario.borrarUsuario(Paciente);
+		ImplementacionUsuario.borrarUsuario(paciente);
 	}
 	
 	function consultarUsuario(){
-		ImplementacionUsuario.mostrarUsuario(Paciente);
+		ImplementacionUsuario.mostrarUsuario(paciente);
 	}
 	
 	
 	function generarCita(){
-		ImplementacionCitas.crearCitas(citaMedica, Paciente);
+		ImplementacionCitas.crearCitas(citaMedica, paciente);
 	}
 	
 	function datosCita(){
