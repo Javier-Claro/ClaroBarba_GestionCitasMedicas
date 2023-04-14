@@ -95,7 +95,7 @@ class ImplementacionUsuario
 class ImplementacionCitas
 {
 	//Metodo para crear una cita:
-	crearCitas(bd2)
+	crearCitas(bd2, bd)
 	{
 		//Pedimos los datos:
 		var pacienteDNI=prompt("Introduzca su DNI del paciente:");
@@ -161,7 +161,7 @@ class ImplementacionCitas
 	
 	
 	function generarCita(){
-		ImplementacionCitas.crearCitas(citaMedica);
+		ImplementacionCitas.crearCitas(citaMedica, Paciente);
 	}
 	
 	function datosCita(){
